@@ -7,9 +7,8 @@ html{
 }
 
 body{
-    background-image: url(./images/home.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: radial-gradient(#2c2f42, #161824);
+    height: 100vh;
     color: #f9f9f9;
     font-family: Avenir-Roman, sans-serif;
     margin: 0;

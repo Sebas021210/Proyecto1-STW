@@ -1,3 +1,7 @@
+header{
+    background-color: #050408;
+}
+
 nav {
     height: 70px;
     display: flex;
@@ -78,4 +82,115 @@ img{
     transition: width 0.2s ease-in-out;
     pointer-events: none;
 }
+
+.profile {
+    position: fixed;
+    display: inline-flex;
+    right: 0px;
+    margin: 0;
+    height: 0%;
+    transition: height 0.4s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+}
+ 
+.profile:hover {
+    display: inline-block;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.profile-selected {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-selected .avatar {
+    margin: 20px;
+}
+
+.profile:hover p {
+    display: inline;
+}
+
+.profile p {
+    color: white;
+}
+
+.profile:hover {
+    top: 0;
+    right: 0;
+    width: 260px;
+    border-right: 1px solid rgb(82, 82, 82);
+    border-left: 1px solid rgb(82, 82, 82);
+    border-bottom: 1px solid rgb(82, 82, 82);
+    background: #131313;
+    height: 680px;
+    animation-name: viewprofiles;
+    animation-duration: 0.3s;
+}
   
+@keyframes viewprofiles {
+    0% {
+      top: 0px;
+      opacity: 0%;
+    }
+    50% {
+      opacity: 55%;
+    }
+    100% {
+      top: 0px;
+      opacity: 100%;
+    }
+}
+
+.profile:hover .profile-selected {
+    border-bottom: 1px solid rgb(82, 82, 82);
+}
+
+.profile-nav {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 12%;
+    left: -15%;
+}
+
+.opciones{
+    position: relative;
+    left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+.profile:hover .profile-nav {
+    display: block;
+}
+
+.profile-nav-profiles p {
+    color: white;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.header li {
+    list-style: none;
+}
+
+.profile-nav-profiles li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-nav-profiles img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
