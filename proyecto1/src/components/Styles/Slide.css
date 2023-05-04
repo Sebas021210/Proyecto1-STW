@@ -27,6 +27,7 @@
     left: 0;
     transition: 1s;
     overflow: hidden;
+    vertical-align: top;
 }
 
 .slider img{
@@ -34,14 +35,9 @@
     min-height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: auto;
+    margin: 0;
 }
 
 .slider img:hover {
     border: 4px solid white;
 }
-
-.slider:hover {
-    border-bottom: 4px solid white;
-}
-  

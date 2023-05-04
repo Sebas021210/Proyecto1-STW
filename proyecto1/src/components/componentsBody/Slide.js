@@ -99,13 +99,14 @@ export default class Slide extends Component {
 
     setInterval(() => {
       createSlide();
-    }, 4500);
+    }, 5000);
   }
 
   render() {
     return (
       <div className="SliderContainer">
         <div className="carousel"></div>
+        <div className="dots-container"></div>
       </div>
     );
   }
