@@ -1,18 +1,18 @@
 .video-card-container{
     position: relative;
-    width: 92%;
+    width: 89%;
     margin: auto;
-    height: 10vw;
+    height: 9.5vw;
     display: flex;
-    margin-bottom: 20px;
+    margin-top: 24px;
     justify-content: space-between;
     cursor: pointer;
 }
 
 .video-card{
     position: relative;
-    min-width: calc(100%/5 - 10px);
-    width: calc(100%/5 - 10px);
+    min-width: calc(100%/5 - 15px);
+    width: calc(100%/5 - 15px);
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
@@ -27,10 +27,42 @@
     object-fit: cover;
 }
 
+.video-card-image{
+    position: relative;
+    margin-top: 35px;
+}
+
 .card-video{
     position: absolute;
 }
 
-.video-card:hover .video-card-image{
-    display: none;
+.video-card:hover{
+    transform: scale(1.05);
+}
+
+.video-card:hover .card-video{
+    opacity: 1;
+}
+
+.video-card-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.card-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 0;
 }
