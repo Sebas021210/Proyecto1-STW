@@ -15,6 +15,17 @@ import chi from '../images/Chi.png'
 import './Styles/Header.css'
 
 export default class Header extends Component{
+    componentDidMount() {
+        const div = document.querySelector('header')
+        window.addEventListener('scroll', function(){
+            if(div && window.scrollY > 10){
+                div.classList.add('color')
+            }else if (div){
+                div.classList.remove('color')
+            }    
+        })
+    }
+
     render(){
         return(
             <header>
@@ -52,35 +63,35 @@ export default class Header extends Component{
                         </a>
                     </nav>
 
-                    <div class="profile">
-                        <div class="profile-selected">
+                    <div className="profile">
+                        <div className="profile-selected">
                             <p id="name-user">Sebas</p>
-                            <img class="avatar img-user" src={spiderman} alt="spiderman"/>
+                            <img className="avatar img-user" src={spiderman} alt="spiderman"/>
                         </div>
                         
-                        <nav class="profile-nav">
-                            <ul class="profile-nav-profiles">
+                        <nav className="profile-nav">
+                            <ul className="profile-nav-profiles">
                                 <li>
-                                    <img class="avatar" src={vision} alt="vision"/>
+                                    <img className="avatar" src={vision} alt="vision"/>
                                     <p>Master</p>
                                 </li>
                                 <li>
-                                    <img class="avatar" src={wanda} alt="wanda"/>
+                                    <img className="avatar" src={wanda} alt="wanda"/>
                                     <p>Tiviet</p>
                                 </li>
                                 <li>
-                                    <img class="avatar" src={grogu} alt="grogu"/>
+                                    <img className="avatar" src={grogu} alt="grogu"/>
                                     <p>Valdez</p>
                                 </li>
                                 <li>
-                                    <img class="avatar" src={loki} alt="Loki"/>
+                                    <img className="avatar" src={loki} alt="Loki"/>
                                     <p>Manuel</p>
                                 </li>
                                 <li>
-                                    <img class="avatar" src={chi} alt="chi"/>
+                                    <img className="avatar" src={chi} alt="chi"/>
                                     <p>Ludwing</p>
                                 </li>
-                                <div class="opciones">
+                                <div className="opciones">
                                     <li><a href='/editar perfiles'><span>Editar perfiles</span></a></li>
                                     <li><a href='/ajustes'><span>Ajustes de aplicación</span></a></li>
                                     <li><a href='/cuenta'><span>Cuenta</span></a></li>
@@ -89,7 +100,7 @@ export default class Header extends Component{
                                 </div>
                                 
                             </ul>
-                            <ul class="profile-nav-options">
+                            <ul className="profile-nav-options">
                                 
                             </ul>
                         </nav>

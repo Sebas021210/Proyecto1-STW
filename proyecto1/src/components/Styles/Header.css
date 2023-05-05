@@ -1,4 +1,8 @@
 header{
+    background-color: transparent;
+}
+
+.color{
     background-color: #050408;
 }
 
@@ -193,4 +197,21 @@ img{
 .profile-nav-profiles img {
     margin-top: 15px;
     margin-left: 15px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+main {
+    margin-top: 100px;
+}
+
+header.sticky {
+    transform: translateY(-100%);
 }
