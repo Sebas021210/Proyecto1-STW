@@ -7,6 +7,7 @@ import img5 from '../../images/img5.jpg'
 import img6 from '../../images/img6.jpg'
 import img7 from '../../images/img7.jpg'
 import img8 from '../../images/img8.jpg'
+import img9 from '../../images/img9.jpg'
 import '../Styles/Slide.css'
 
 const movies = [
@@ -49,7 +50,12 @@ const movies = [
     name: 'Movie 8',
     des: 'This is the eighth movie',
     image: img8
-  }
+  },
+  {
+    name: 'Movie 9',
+    des: 'This is the nine movie',
+    image: img9
+  },
 ];
 
 export default class Slide extends Component {
