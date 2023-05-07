@@ -8,6 +8,8 @@ import img6 from '../../images/img6.jpg'
 import img7 from '../../images/img7.jpg'
 import img8 from '../../images/img8.jpg'
 import img9 from '../../images/img9.jpg'
+import prev from '../../images/prev.png'
+import next from '../../images/next.png'
 import '../Styles/Slide.css'
 
 const movies = [
@@ -61,6 +63,8 @@ const movies = [
 export default class Slide extends Component {
   componentDidMount() {
     const carousel = document.querySelector('.carousel');
+    //const prevButton = document.querySelector('.prev');
+    //const nextButton = document.querySelector('.next');
     let sliders = [];
     let slideIndex = 0;
 
@@ -99,6 +103,34 @@ export default class Slide extends Component {
       }
     }
 
+    /* 
+    const showSlides = () => {
+      if (slideIndex >= sliders.length) {
+        slideIndex = 0;
+      } else if (slideIndex < 0) {
+        slideIndex = sliders.length - 1;
+      }
+  
+      for (let i = 0; i < sliders.length; i++) {
+        sliders[i].style.display = "none";
+      }
+  
+      sliders[slideIndex].style.display = "block";
+    };
+
+    showSlides();
+  
+    nextButton.addEventListener("click", () => {
+      slideIndex++;
+      showSlides();
+    });
+  
+    prevButton.addEventListener("click", () => {
+      slideIndex--;
+      showSlides();
+    });
+    */
+
     for (let i = 0; i < 3; i++) {
       createSlide();
     }
@@ -112,7 +144,8 @@ export default class Slide extends Component {
     return (
       <div className="SliderContainer">
         <div className="carousel"></div>
-        <div className="dots-container"></div>
+        <button className="prev"><img src={prev} alt="" /></button>
+        <button className="next"><img src={next} alt="" /></button>
       </div>
     );
   }

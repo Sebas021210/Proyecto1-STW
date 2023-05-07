@@ -22,15 +22,45 @@ import img2R from '../../images/recomendaciones/img2.jpg'
 import img3R from '../../images/recomendaciones/img3.jpg'
 import img4R from '../../images/recomendaciones/img4.jpg'
 import img5R from '../../images/recomendaciones/img5.jpg'
+
+import prev from '../../images/prev.png'
+import next from '../../images/next.png'
+
 import '../Styles/Movies.css'
 
 export default class Movies extends Component {
+    /* 
+    componentDidMount() {
+        let cardContainers = [...document.querySelectorAll('.card-container-grande')];
+      
+        cardContainers.forEach((container) => {
+            let preButton = container.querySelector('.prevBtn');
+            let nextButton = container.querySelector('.nextBtn');
+      
+            if (preButton && nextButton) {
+                let containerDimensions = container.getBoundingClientRect();
+                let containerWidth = containerDimensions.width;
+      
+                nextButton.addEventListener('click', () => {
+                    container.scrollLeft += containerWidth - 200;
+                });
+      
+                preButton.addEventListener('click', () => {
+                    container.scrollLeft -= containerWidth + 200;
+                });
+            }
+        });
+    }      
+    */
+
     render(){
         return(
             <div className="container">
                 <div className="movies">
                     <h1 className="title">Star Wars: Películas y series</h1>
                     <div className="movies-list-grande">
+                        <button className="prevBtn"><img src={prev} alt="" /></button>
+                        <button className="nextBtn"><img src={next} alt="" /></button>
                         <div className="card-container-grande">
                             <div className="card-grande">
                                 <img src={img1SW} className="card-img-grande" alt="" />
@@ -54,6 +84,8 @@ export default class Movies extends Component {
                 <div className="movies">
                     <h1 className="title">Novedades en Disney+</h1>
                     <div className="movies-list-peque">
+                        <button className="prevBtn"><img src={prev} alt="" /></button>
+                        <button className="nextBtn"><img src={next} alt="" /></button>
                         <div className="card-container-peque">
                             <div className="card-peque">
                                 <img src={img1N} className="card-img-peque" alt="" />
@@ -77,7 +109,9 @@ export default class Movies extends Component {
                 <div className="movies">
                     <h1 className="title">Íconos del pop</h1>
                     <div className="movies-list-grande">
-                    <div className="card-container-grande">
+                    <button className="prevBtn"><img src={prev} alt="" /></button>
+                    <button className="nextBtn"><img src={next} alt="" /></button>
+                        <div className="card-container-grande">
                             <div className="card-grande">
                                 <img src={img1IC} className="card-img-grande" alt="" />
                             </div>
@@ -100,6 +134,8 @@ export default class Movies extends Component {
                 <div className="movies">
                     <h1 className="title">Recomendaciones para ti</h1>
                     <div className="movies-list-peque">
+                        <button className="prevBtn"><img src={prev} alt="" /></button>
+                        <button className="nextBtn"><img src={next} alt="" /></button>
                         <div className="card-container-peque">
                             <div className="card-peque">
                                 <img src={img1R} className="card-img-peque" alt="" />
