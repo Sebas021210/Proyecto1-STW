@@ -98,10 +98,6 @@ export default class Header extends Component{
                                     <li><a href='/ayuda'><span>Ayuda</span></a></li>
                                     <li><a href='/cerrar sesion'><span>Cerrar sesión</span></a></li>
                                 </div>
-                                
-                            </ul>
-                            <ul className="profile-nav-options">
-                                
                             </ul>
                         </nav>
                     </div>
