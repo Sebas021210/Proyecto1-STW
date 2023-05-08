@@ -9,7 +9,7 @@ module.exports = {
         index: './src/index.js',
     },
     output: {
-        path: path.resolve(__dirname, 'dist_webpack_babel'),
+        path: path.resolve(__dirname, 'dist_webpack'),
         filename: '[name].bundle.js',
     },
     module: {
