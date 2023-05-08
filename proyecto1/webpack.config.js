@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
+    mode: 'development',
     entry: {
         index: './src/index.js',
     },
@@ -41,12 +42,24 @@ module.exports = {
             ]
         },
         {
+            test: /\.mp4$/,
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "videos/"
+                    }
+                }
+            ]
+        },
+        {
             test: /\.m?js$/,
             exclude: /node_modules/,
             use: {
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/preset-env']
+                    presets: ["@babel/preset-env", "@babel/preset-react"]
                 }
             }
         },
