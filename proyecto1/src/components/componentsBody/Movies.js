@@ -51,37 +51,57 @@ export default class Movies extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          currentPages: {
-            SW: 0,
-            N: 0,
-            IC: 0,
-            R: 0,
-          },
+            currentPages: {
+                SW: 0,
+                N: 0,
+                IC: 0,
+                R: 0,
+            },
+            totalPages: {
+                SW: 0,
+                N: 0,
+                IC: 0,
+                R: 0,
+            },
         };
-      }
+    }
+      
+    componentDidMount() {
+        const totalMoviesSW = [img1SW, img2SW, img3SW, img4SW, img5SW, img6SW, img7SW, img8SW, img9SW, img10SW,].length;
+        const totalMoviesN = [img1N, img2N, img3N, img4N, img5N, img6N, img7N, img8N, img9N, img10N,].length;
+        const totalMoviesIC = [img1IC, img2IC, img3IC, img4IC, img5IC, img6IC, img7IC, img8IC, img9IC, img10IC,].length;
+        const totalMoviesR = [img1R, img2R, img3R, img4R, img5R, img6R, img7R, img8R, img9R, img10R,].length;
+        const totalPages = {
+            SW: Math.ceil(totalMoviesSW / 5),
+            N: Math.ceil(totalMoviesN / 5),
+            IC: Math.ceil(totalMoviesIC / 5),
+            R: Math.ceil(totalMoviesR / 5),
+        };
+        this.setState({ totalPages });
+    }
     
     handlePrevClick = (listName) => {
         const { currentPages } = this.state;
         if (currentPages[listName] > 0) {
             const newCurrentPages = {
-            ...currentPages,
-            [listName]: currentPages[listName] - 5,
+                ...currentPages,
+                [listName]: currentPages[listName] - 5,
             };
             this.setState({ currentPages: newCurrentPages });
         }
     };
     
     handleNextClick = (listName) => {
-        const { currentPages } = this.state;
-        if (currentPages[listName] < 10) {
-          const newCurrentPages = {
-            ...currentPages,
-            [listName]: currentPages[listName] + 5,
-          };
-          this.setState({ currentPages: newCurrentPages });
+        const { currentPages, totalPages } = this.state;
+        if (currentPages[listName] < totalPages[listName] - 1) {
+            const newCurrentPages = {
+                ...currentPages,
+                [listName]: currentPages[listName] + 5,
+            };
+            this.setState({ currentPages: newCurrentPages });
         }
     };
-
+    
     render(){
         const { currentPages } = this.state;
         const visibleMoviesSW = [img1SW, img2SW, img3SW, img4SW, img5SW, img6SW, img7SW, img8SW, img9SW, img10SW,].slice(currentPages.SW, currentPages.SW + 5);

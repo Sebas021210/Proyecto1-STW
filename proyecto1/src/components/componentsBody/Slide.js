@@ -14,6 +14,10 @@ import '../Styles/Slide.css'
 
 const movies = [
   {
+    name: 'Movie 9',
+    image: img9
+  },
+  {
     name: 'Movie 1',
     image: img1
   },
@@ -45,16 +49,13 @@ const movies = [
     name: 'Movie 8',
     image: img8
   },
-  {
-    name: 'Movie 9',
-    image: img9
-  },
+  
 ];
 
 export default class Slide extends Component {
   componentDidMount() {
     const carousel = document.querySelector('.carousel');
-    //const prevButton = document.querySelector('.prev');
+    const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     let sliders = [];
     let slideIndex = 0;
@@ -70,15 +71,12 @@ export default class Slide extends Component {
       let content = document.createElement('div');
       let h1 = document.createElement('h1');
   
-      imgElement.appendChild(document.createTextNode(''));
       h1.appendChild(document.createTextNode(movies[slideIndex].name));
       content.appendChild(h1);
       slide.appendChild(imgElement);
       slide.appendChild(content);
       carousel.appendChild(slide);
-  
       imgElement.src = movies[slideIndex].image;
-      slideIndex++;
   
       slide.className = 'slider';
       content.className = 'slide-content';
@@ -92,6 +90,7 @@ export default class Slide extends Component {
     }
   
     for (let i = 0; i < 3; i++) {
+      slideIndex++;
       createSlide();
     }
   
@@ -100,33 +99,30 @@ export default class Slide extends Component {
       createSlide();
       clearInterval(intervalId);
       intervalId = setInterval(() => {
+        slideIndex++;
         createSlide();
       }, 5000);
     });
-  
-    /* 
+   
     prevButton.addEventListener("click", () => {
       slideIndex--;
       if (slideIndex < 0) {
         slideIndex = movies.length - 1;
       }
-      sliders = [];
-      for (let i = 0; i < 3; i++) {
-        createSlide();
-      }
       clearInterval(intervalId);
+      createSlide();
       intervalId = setInterval(() => {
+        slideIndex++;
         createSlide();
       }, 5000);
-    });
-    */
+    });  
   
     intervalId = setInterval(() => {
+      slideIndex++;
       createSlide();
     }, 5000);
   }
   
-
   render() {
     return (
       <div className="SliderContainer">
