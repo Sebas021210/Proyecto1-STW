@@ -14,51 +14,51 @@ import loki from '../images/loki.png'
 import chi from '../images/Chi.png'
 import './Styles/Header.css'
 
-export default class Header extends Component{
+export default class Header extends Component {
     componentDidMount() {
         const div = document.querySelector('header')
-        window.addEventListener('scroll', function(){
-            if(div && window.scrollY > 10){
+        window.addEventListener('scroll', function () {
+            if (div && window.scrollY > 10) {
                 div.classList.add('color')
-            }else if (div){
+            } else if (div) {
                 div.classList.remove('color')
-            }    
+            }
         })
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <header>
                 <nav>
                     <img src={logo} alt="Logo Disney+" />
                     <nav id="Menu">
                         <a href='/inicio'>
-                            <img src={home} alt='INICIO'/>
+                            <img src={home} alt='INICIO' />
                             <span>INICIO</span>
                         </a>
 
                         <a href='/busqueda'>
-                            <img src={search} alt='BÚSQUEDA'/>
+                            <img src={search} alt='BÚSQUEDA' />
                             <span>BÚSQUEDA</span>
                         </a>
-                        
+
                         <a href='/lista'>
-                            <img src={watchlist} alt='MI LISTA'/>
+                            <img src={watchlist} alt='MI LISTA' />
                             <span>MI LISTA</span>
                         </a>
-                        
+
                         <a href='/originales'>
-                            <img src={original} alt='ORIGINALES'/>
+                            <img src={original} alt='ORIGINALES' />
                             <span>ORIGINALES</span>
                         </a>
 
                         <a href='/peliculas'>
-                            <img src={movies} alt='PELÍCULAS'/>
+                            <img src={movies} alt='PELÍCULAS' />
                             <span>PELÍCULAS</span>
                         </a>
-                        
+
                         <a href='/series'>
-                            <img src={series} alt='SERIES'/>
+                            <img src={series} alt='SERIES' />
                             <span>SERIES</span>
                         </a>
                     </nav>
@@ -66,29 +66,29 @@ export default class Header extends Component{
                     <div className="profile">
                         <div className="profile-selected">
                             <p id="name-user">Sebas</p>
-                            <img className="avatar img-user" src={spiderman} alt="spiderman"/>
+                            <img className="avatar img-user" src={spiderman} alt="spiderman" />
                         </div>
-                        
+
                         <nav className="profile-nav">
                             <ul className="profile-nav-profiles">
                                 <li>
-                                    <img className="avatar" src={vision} alt="vision"/>
+                                    <img className="avatar" src={vision} alt="vision" />
                                     <p>Master</p>
                                 </li>
                                 <li>
-                                    <img className="avatar" src={wanda} alt="wanda"/>
+                                    <img className="avatar" src={wanda} alt="wanda" />
                                     <p>Tiviet</p>
                                 </li>
                                 <li>
-                                    <img className="avatar" src={grogu} alt="grogu"/>
+                                    <img className="avatar" src={grogu} alt="grogu" />
                                     <p>Valdez</p>
                                 </li>
                                 <li>
-                                    <img className="avatar" src={loki} alt="Loki"/>
+                                    <img className="avatar" src={loki} alt="Loki" />
                                     <p>Manuel</p>
                                 </li>
                                 <li>
-                                    <img className="avatar" src={chi} alt="chi"/>
+                                    <img className="avatar" src={chi} alt="chi" />
                                     <p>Ludwing</p>
                                 </li>
                                 <div className="opciones">

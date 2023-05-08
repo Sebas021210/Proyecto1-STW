@@ -4,9 +4,9 @@ import Body from "./components/Body.js"
 import Footer from "./components/Footer.js"
 import "./App.css";
 
-class App extends Component{
-    render(){
-        return(
+class App extends Component {
+    render() {
+        return (
             <div id="App">
                 <Header />
                 <Body />

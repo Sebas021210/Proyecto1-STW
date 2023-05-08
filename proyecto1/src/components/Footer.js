@@ -4,7 +4,7 @@ import './Styles/Footer.css'
 
 export default class Footer extends Component {
     render() {
-        return(
+        return (
             <footer>
                 <div className="Logo">
                     <img src={logo} alt="Logo Disney+" />

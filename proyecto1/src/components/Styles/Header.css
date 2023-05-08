@@ -1,8 +1,8 @@
-header{
+header {
     background-color: transparent;
 }
 
-.color{
+.color {
     background-color: #050408;
 }
 
@@ -15,7 +15,7 @@ nav {
     letter-spacing: 2px;
 }
 
-#Menu{
+#Menu {
     align-items: center;
     display: flex;
     height: 100%;
@@ -27,32 +27,32 @@ nav {
     margin-left: 32px;
 }
 
-img{
+img {
     height: 75%;
     width: 73px;
-    padding:0;
+    padding: 0;
     margin-top: 4px;
     max-height: 70px;
     font-size: 0;
     display: inline-block;
 }
 
-#Menu a{
+#Menu a {
     display: inline;
     align-items: center;
     margin: 0 20px;
     margin-bottom: 5px;
 }
-  
-#Menu a img{
+
+#Menu a img {
     height: 20px;
     min-width: 20px;
     width: 20px;
     margin-bottom: -5px;
     margin-right: 10px;
 }
-  
-#Menu a span{
+
+#Menu a span {
     color: #ffffff;
     font-size: 12.4px;
     font-weight: bold;
@@ -61,7 +61,7 @@ img{
     padding: 2px 0px;
     position: relative;
 }
- 
+
 #Menu a:hover span::after {
     content: "";
     display: block;
@@ -72,8 +72,8 @@ img{
     bottom: -7px;
     left: 0;
     transition: width 0.2s ease-in-out;
-  }
-  
+}
+
 #Menu a span::after {
     content: "";
     display: block;
@@ -97,7 +97,7 @@ img{
     cursor: pointer;
     z-index: 1;
 }
- 
+
 .profile:hover {
     display: inline-block;
 }
@@ -142,18 +142,20 @@ img{
     animation-name: viewprofiles;
     animation-duration: 0.3s;
 }
-  
+
 @keyframes viewprofiles {
     0% {
-      top: 0px;
-      opacity: 0%;
+        top: 0px;
+        opacity: 0%;
     }
+
     50% {
-      opacity: 55%;
+        opacity: 55%;
     }
+
     100% {
-      top: 0px;
-      opacity: 100%;
+        top: 0px;
+        opacity: 100%;
     }
 }
 
@@ -170,7 +172,7 @@ img{
     left: -15%;
 }
 
-.opciones{
+.opciones {
     position: relative;
     left: 10%;
     margin-top: 13%;

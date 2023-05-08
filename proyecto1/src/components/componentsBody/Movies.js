@@ -65,7 +65,7 @@ export default class Movies extends Component {
             },
         };
     }
-      
+
     componentDidMount() {
         const totalMoviesSW = [img1SW, img2SW, img3SW, img4SW, img5SW, img6SW, img7SW, img8SW, img9SW, img10SW,].length;
         const totalMoviesN = [img1N, img2N, img3N, img4N, img5N, img6N, img7N, img8N, img9N, img10N,].length;
@@ -79,7 +79,7 @@ export default class Movies extends Component {
         };
         this.setState({ totalPages });
     }
-    
+
     handlePrevClick = (listName) => {
         const { currentPages } = this.state;
         if (currentPages[listName] > 0) {
@@ -90,7 +90,7 @@ export default class Movies extends Component {
             this.setState({ currentPages: newCurrentPages });
         }
     };
-    
+
     handleNextClick = (listName) => {
         const { currentPages, totalPages } = this.state;
         if (currentPages[listName] < totalPages[listName] - 1) {
@@ -101,15 +101,15 @@ export default class Movies extends Component {
             this.setState({ currentPages: newCurrentPages });
         }
     };
-    
-    render(){
+
+    render() {
         const { currentPages } = this.state;
         const visibleMoviesSW = [img1SW, img2SW, img3SW, img4SW, img5SW, img6SW, img7SW, img8SW, img9SW, img10SW,].slice(currentPages.SW, currentPages.SW + 5);
         const visibleMoviesN = [img1N, img2N, img3N, img4N, img5N, img6N, img7N, img8N, img9N, img10N,].slice(currentPages.N, currentPages.N + 5);
         const visibleMoviesIC = [img1IC, img2IC, img3IC, img4IC, img5IC, img6IC, img7IC, img8IC, img9IC, img10IC,].slice(currentPages.IC, currentPages.IC + 5);
         const visibleMoviesR = [img1R, img2R, img3R, img4R, img5R, img6R, img7R, img8R, img9R, img10R,].slice(currentPages.R, currentPages.R + 5);
 
-        return(
+        return (
             <div className="container">
                 <div className="movies">
                     <h1 className="title">Star Wars: Películas y series</h1>
