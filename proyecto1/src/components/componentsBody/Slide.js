@@ -10,7 +10,7 @@ import img8 from '../../images/img8.jpg'
 import img9 from '../../images/img9.jpg'
 import prev from '../../images/prev.png'
 import next from '../../images/next.png'
-import '../Styles/Slide.css'
+import '../Styles/Slide.scss'
 
 const movies = [
   {

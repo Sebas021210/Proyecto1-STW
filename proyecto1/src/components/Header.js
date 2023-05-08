@@ -12,7 +12,7 @@ import wanda from '../images/wanda.png'
 import grogu from '../images/grogu.png'
 import loki from '../images/loki.png'
 import chi from '../images/Chi.png'
-import './Styles/Header.css'
+import './Styles/Header.scss'
 
 export default class Header extends Component {
     componentDidMount() {

@@ -45,7 +45,7 @@ import img10R from '../../images/recomendaciones/img10R.jpg'
 
 import prev from '../../images/prev.png'
 import next from '../../images/next.png'
-import '../Styles/Movies.css'
+import '../Styles/Movies.scss'
 
 export default class Movies extends Component {
     constructor(props) {

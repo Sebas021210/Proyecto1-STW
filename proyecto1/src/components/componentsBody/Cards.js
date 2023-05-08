@@ -9,7 +9,7 @@ import star from '../../images/option-starwars.png'
 import starVideo from '../../videos/option-star-wars.mp4'
 import national from '../../images/option-national.png'
 import nationalVideo from '../../videos/option-national-geographic.mp4'
-import '../Styles/Cards.css'
+import '../Styles/Cards.scss'
 
 export default class Cards extends Component {
   componentDidMount() {
