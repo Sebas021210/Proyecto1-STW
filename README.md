@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./proyecto1/src/images/disneyLogo.png" alt="Disney+" style="width: 200px; height: auto;"/>
+    <img src="./proyecto1/src/images/logoDisney.svg" alt="Disney+" style="width: 200px; height: auto;"/>
 </p>
 
 # Proyecto1-STW
