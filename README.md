@@ -39,4 +39,14 @@ Fecha en la que se copio: 03/05/202
 - `npm run eject`
 - `npm run webpack`
 
+## Estructura
+
+- `proyecto1` carpeta donde se encuentra la configuracion (package.json, webpack, babel)
+- - `dist` carpeta donde se encuentra el proyecto creado por webpack 
+- - `public` carpeta donde se encuentra el archivo .html del proyecto
+- - `src` carpeta donde se encuentra los archivos .js y .scss
+- - - `componentes` carpeta donde se encuentran los componentes del proyecto
+- - - `images` carpeta donde se encuentran las imagenes utilizadas en el proyecto
+- - - `videos` carpeta donde se encuentran los videos utilizados en el proyecto
+
 # Sebastián José Solorzano Pérez 21826
