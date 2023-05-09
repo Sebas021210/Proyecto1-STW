@@ -18,7 +18,7 @@ Fecha en la que se copio: 03/05/202
 
 - ⚛ **React** — 16.12.0
 - 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build
-- - 🛠 **Babel** — ES6 syntax, Airbnb & React/Recommended config
+- 🛠 **Babel** — ES6 syntax, Airbnb & React/Recommended config
 - 💅 **SCSS** — Styled Components, CSS, Sass
 - ✅  **Tests** — Jest, React Testing Library & Cypress
 
