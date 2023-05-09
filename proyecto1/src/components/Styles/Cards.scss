@@ -30,7 +30,15 @@
 
 .video-card-image {
     position: relative;
-    margin-top: 35px;
+    width: 25px;
+    min-height: 130px;
+}
+
+@media screen and (max-width: 1000px) {
+    .video-card-image {
+        width: 5px;
+        min-height: 25px;
+    }
 }
 
 .card-video {
